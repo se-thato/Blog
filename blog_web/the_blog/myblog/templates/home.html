@@ -4,11 +4,11 @@
 {% block content %}
     
 
-<h1>Post</h1>
+<h1>Posts</h1>
 
 <ul>
 {% for post in object_list %} 
-    <li><a href="{% url 'articles_detail' post.pk %}">{{ post.title }}</a> - {{ post.author }}
+    <li><a href="{% url 'articles_detail' post.pk %}">{{ post.title }} - {{ post.post_date }} </a> - {{ post.author }}
         - <small><a href="{% url 'update_post' post.pk %}">(Edit Post)</a> 
 
             <a href="{% url 'delete_post' post.pk %}">Delete</a>
